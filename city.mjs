@@ -8,7 +8,11 @@ const city =[
     "Athens",
     "Geneva",
     "Budapest",
-    "Vienna"
+    "Vienna",
+    "Londres",
+    "New York",
+    "Tokyo",
+    "Lessines"
 ]
 
 export default city;
