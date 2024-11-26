@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "chart.js": "^4.4.6",
+    "unsplash-js": "^7.0.19"
+  }
+}
