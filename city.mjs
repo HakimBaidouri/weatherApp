@@ -1,20 +1,3 @@
-// const city =[
-//     "London",
-//     "Paris",
-//     "Madrid",
-//     "Brussels",
-//     "Berlin",
-//     "Rome",
-//     "Athens",
-//     "Geneva",
-//     "Budapest",
-//     "Vienna",
-//     "Londres",
-//     "New York",
-//     "Tokyo",
-//     "Lessines"
-// ]
-
 let city = [];
 
 function createCityList(json){
@@ -48,7 +31,6 @@ export async function getCityList (choice){
     
         // Convertit la réponse en JSON
         const cityJSON = await response.json();
-        console.log(cityJSON.length);
         createCityList(cityJSON);
         return city
 

@@ -16,49 +16,9 @@ document.body.appendChild(container);
 
 let choice = "";
 
-Chart.register(...registerables);
-
-const ctx = document.getElementById('myChart').getContext('2d');
-
-const myChart = new Chart(ctx, {
-    type: 'bar', // Type du graphique
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: 'Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true // L'échelle commence à 0
-            }
-        }
-    }
-});
-
 input.addEventListener("keyup", async () => {
     const input =  document.querySelector("input");
     const submit = document.querySelector("button");
-    console.log(input.value);
 
     const city = await getCityList(input.value);
 
@@ -171,14 +131,63 @@ submit.addEventListener("click",async (event) => {
         const h3 = document.createElement("h3");
         h3.textContent = div.className;
         const p_minTemp = document.createElement("p");
-        p_minTemp.textContent = "Minimum temperature : " + Math.round(minArr[count]).toString() + " °C";
+        p_minTemp.textContent = "Min temp : " + Math.round(minArr[count]).toString() + " °C";
         const p_maxTemp = document.createElement("p");
-        p_maxTemp.textContent = "Maximum temperature : " + Math.round(maxArr[count]).toString() + " °C";
+        p_maxTemp.textContent = "Max temp : " + Math.round(maxArr[count]).toString() + " °C";
         div.appendChild(h3);
         div.appendChild(p_minTemp);
         div.appendChild(p_maxTemp);
         }
+
         weatherDiv.appendChild(div);
+
+        Chart.register(...registerables);
+
+        // Créez dynamiquement un élément canvas avec des dimensions spécifiques
+        const canvas = document.createElement('canvas');
+        canvas.id = 'myChart'; // Attribuez un ID pour le contexte 2D
+        canvas.width = 100; // Largeur du canvas
+        canvas.height = 100; // Hauteur du canvas
+        weatherDiv.appendChild(canvas); // Ajoutez le canvas à la div
+
+        // Obtenez le contexte 2D du canvas
+        const ctx = canvas.getContext('2d');
+
+        let arrHours = [];
+        let arrTemps = [];
+        
+        for(let count2 = dayArr[count] + 1; count2 <= dayArr[count + 1] + 1; count2++){
+            arrHours.push(dataList[count2].dt_txt.split(" ")[1]);
+            arrTemps.push(dataList[count2].main.temp);
+        }
+
+
+        const myChart = new Chart(ctx, {
+            type: 'line', // Type du graphique
+            data: {
+                labels: arrHours,
+                datasets: [{
+                    label: 'Temperature',
+                    data: arrTemps,
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true // L'échelle commence à 0
+                    }
+                }
+            }
+        });
     }
 
     const img = document.createElement("img");
