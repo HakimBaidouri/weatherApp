@@ -1,0 +1,141 @@
+body{
+    /* background-image: url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2ODAwOTh8MHwxfHNlYXJjaHwxfHxQYXJpcyUyQyUyMElsZS1kZS1GcmFuY2V8ZW58MHwwfHx8MTczMjcxOTMwNHww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080&quot;"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Roboto-flex", sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+label {
+    font-size: 32px;
+    font-weight: 700;
+    color: #E5ECF4;
+    word-spacing: 7px;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+span {
+    color: #FCB72B;
+}
+
+input {
+    display: block;
+    height: 16px;
+    border-radius: 8px;
+    color: gray;
+    background-color: #E5ECF4;
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    font-size: 14px;
+    text-align: center; 
+    font-style: italic;
+    outline: none; /* Supprime l'effet de focus par défaut */
+    margin: 7px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+input::placeholder {
+    color: gray;
+    font-style: italic; 
+    text-align: center;
+}
+
+button {
+    margin-bottom: 7px;
+    height: 24px;
+    width: 120px;
+    border-radius: 8px;
+    background-color: #FCB72B;
+    color: #E5ECF4;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 100ms;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    color: #FCB72B;
+    background-color: #E5ECF4;
+    border: 2px solid #FCB72B;
+}
+
+.container {
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+}
+.container h2 {
+    color: #FCB72B;
+    margin-bottom: 0;
+    font-size: 28px;
+}
+
+.TODAY {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.TODAY h3 {
+    margin: 0;
+    color: #E5ECF4;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.TODAY p {
+    margin: 0;
+    margin-bottom: 5px;
+    color: #72a0e5;
+    font-weight: 500;
+}
+
+.weather-other-day {
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.other-day {
+    width: 25%;
+    max-width: 25%;
+}
+
+.other-day h3{
+    margin: 0;
+    color: #E5ECF4;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.other-day p {
+    margin: 0;
+    margin-bottom: 2.5px;
+    color: #72a0e5;
+    font-size: 75%;
+}
+
+
+.other-day #myChart {
+    max-height: 200px;
+}

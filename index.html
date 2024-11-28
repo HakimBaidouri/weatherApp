@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="/src/script.mjs" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,600;1,600&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <form id="city-form">
-        <label for="city-choice">Choose your city:</label>
-        <input list="city-list" id="city-choice" name="city-choice" />
+        <label for="city-choice">CHOOSE YOUR <span>CITY:</span></label>
+        <input list="city-list" id="city-choice" name="city-choice" placeholder="Type here"/>
       
         <datalist id="city-list">
         </datalist>
@@ -18,5 +22,43 @@
 
         <button id="search-refresh" style="display: block;">Refresh</button>
       </form>
+
+      <!-- <div class="container" style="display: flex; gap: 25px; flex-direction: column;">
+        <h2 class="city">Paris, Ile-de-France</h2>
+        <div class="weather-today">
+            <div class="TODAY">
+                <h3>TODAY</h3>
+                <p>Min temp : 7 °C</p>
+                <p class="max-temp">Max temp : 9 °C</p>
+                <canvas id="myChart" width="2384" height="2384" style="display: block; box-sizing: border-box; height: 1192px; width: 1192px;"></canvas>
+            </div>
+        </div>
+        <div class="weather-other-day" style="display: flex;">
+            <div class="other-day" id="Friday">
+                <h3>FRIDAY</h3>
+                <p>Min temp : 5 °C</p>
+                <p>Max temp : 8 °C</p>
+                <canvas id="myChart" width="213" height="213" style="display: block; box-sizing: border-box; height: 106px; width: 106px;"></canvas>
+            </div>
+            <div class="other-day" id="Saturday">
+                <h3>Saturday</h3>
+                <p>Min temp : 4 °C</p>
+                <p>Max temp : 9 °C</p>
+                <canvas id="myChart" width="213" height="213" style="display: block; box-sizing: border-box; height: 106px; width: 106px;"></canvas>
+            </div>
+            <div class="other-day" id="Sunday">
+                <h3>Sunday</h3>
+                <p>Min temp : 5 °C</p>
+                <p>Max temp : 10 °C</p>
+                <canvas id="myChart" width="229" height="229" style="display: block; box-sizing: border-box; height: 114px; width: 114px;"></canvas>
+            </div>
+            <div class="other-day" id="Monday">
+                <h3>Monday</h3>
+                <p>Min temp : 9 °C</p>
+                <p>Max temp : 12 °C</p>
+                <canvas id="myChart" width="229" height="229" style="display: block; box-sizing: border-box; height: 114px; width: 114px;"></canvas>
+            </div>
+        </div>
+    </div> -->
 </body>
 </html>
