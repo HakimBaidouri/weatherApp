@@ -12,12 +12,7 @@ This project is a **weather data visualization application** that allows users t
 
 ## DEMO 🎥
 
-## DEMO 🎥
-
-<video width="600" controls>
-  <source src="./assets/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![Aperçu de la vidéo](./assets/demo.mp4) <br>
 
 ## Technologies Used 🛠️
 - **Vite** – Ultra-fast frontend development environment.
