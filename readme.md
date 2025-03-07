@@ -10,6 +10,15 @@ This project is a **weather data visualization application** that allows users t
 - **Temperature Charts**: Uses **Chart.js** to create interactive graphs showing temperature trends.
 - **Fast Development with Vite**: The project is built with **Vite** for a fast and efficient development environment.
 
+## DEMO 🎥
+
+## DEMO 🎥
+
+<video width="600" controls>
+  <source src="./assets/demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ## Technologies Used 🛠️
 - **Vite** – Ultra-fast frontend development environment.
 - **OpenWeatherMap API** – Fetches real-time weather data.
