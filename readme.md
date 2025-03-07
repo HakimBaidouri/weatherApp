@@ -12,7 +12,7 @@ This project is a **weather data visualization application** that allows users t
 
 ## DEMO 🎥
 
-![Aperçu de la vidéo](./assets/demo.mp4) <br>
+![Aperçu de la vidéo](demo.gif) <br>
 
 ## Technologies Used 🛠️
 - **Vite** – Ultra-fast frontend development environment.
